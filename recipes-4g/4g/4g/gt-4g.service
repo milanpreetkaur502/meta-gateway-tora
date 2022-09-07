@@ -1,0 +1,11 @@
+[Unit]
+Description=4G service
+
+[Service]
+Type=Oneshot
+ExecStart=/home/root/4g.sh
+Restart=always
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

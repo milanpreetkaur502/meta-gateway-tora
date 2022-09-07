@@ -1,0 +1,13 @@
+[Unit]
+Description=Network LED
+After=gt-4g.service
+Requires=gt-4g.service
+
+[Service]
+Type=simple
+ExecStart=/home/root/networkled.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Collect BLE data
+After=gt-pubsub.service
+Requires=gt-pubsub.service
+
+[Service]
+Type=simple
+ExecStart=/home/root/glib_gateway_arm
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

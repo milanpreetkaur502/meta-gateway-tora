@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="tty", KERNEL=="ttyACM[0-9]", ENV{SYSTEMD_WANTS}="ble.service"
+ACTION=="remove", SUBSYSTEM=="tty", KERNEL=="ttyACM[0-9]", RUN+="/bin/systemctl --no-block stop ble.service"

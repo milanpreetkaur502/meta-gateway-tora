@@ -1,0 +1,12 @@
+[Unit]
+Description= BLE device HCI configuration
+
+[Service]
+#ExecStartPre=/bin/sleep 1s
+
+ExecStart=/usr/sbin/bt_init.sh
+ExecStartPost=/usr/sbin/mg_init.sh
+
+
+[Install]
+WantedBy=multi-user.target

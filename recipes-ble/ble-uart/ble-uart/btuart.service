@@ -1,0 +1,12 @@
+[Unit]
+Description= BLE device HCI configuration over UART
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sleep 2s
+ExecStart=/usr/sbin/ble/bt_att.sh
+ExecStartPost=/usr/sbin/ble/bt_pow.sh
+
+
+[Install]
+WantedBy=multi-user.target
